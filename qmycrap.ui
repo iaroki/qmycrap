@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>793</width>
+    <height>416</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>qmycrap</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTreeView" name="treeView">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>20</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="movable">
+    <bool>true</bool>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>RightToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionTop"/>
+   <addaction name="actionBottom"/>
+   <addaction name="separator"/>
+   <addaction name="actionDate"/>
+   <addaction name="separator"/>
+   <addaction name="actionPswd"/>
+   <addaction name="actionPreferences"/>
+   <addaction name="separator"/>
+   <addaction name="actionExit"/>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>793</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionTop"/>
+    <addaction name="actionBottom"/>
+    <addaction name="separator"/>
+    <addaction name="actionPreferences"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuInsert">
+    <property name="title">
+     <string>Insert</string>
+    </property>
+    <widget class="QMenu" name="menuRun">
+     <property name="title">
+      <string>Run</string>
+     </property>
+     <addaction name="actionFirstrun"/>
+     <addaction name="actionRerun"/>
+    </widget>
+    <widget class="QMenu" name="menuPlatform">
+     <property name="title">
+      <string>Platform</string>
+     </property>
+     <addaction name="actionPS1"/>
+     <addaction name="actionPS2"/>
+     <addaction name="actionPS3"/>
+     <addaction name="actionPSP"/>
+     <addaction name="actionPC"/>
+     <addaction name="actionNDS"/>
+     <addaction name="actionGBA"/>
+     <addaction name="actionSNES"/>
+     <addaction name="actionNES"/>
+     <addaction name="actionWII"/>
+     <addaction name="actionGC"/>
+     <addaction name="actionGENESIS"/>
+    </widget>
+    <addaction name="actionDate"/>
+    <addaction name="menuPlatform"/>
+    <addaction name="menuRun"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuInsert"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/save.svg</normaloff>icons/save.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/exit.svg</normaloff>icons/exit.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionPswd">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/lock.svg</normaloff>icons/lock.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Pswd</string>
+   </property>
+  </action>
+  <action name="actionDate">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/date.svg</normaloff>icons/date.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Date</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionFirstrun">
+   <property name="text">
+    <string>Firstrun</string>
+   </property>
+  </action>
+  <action name="actionRerun">
+   <property name="text">
+    <string>Rerun</string>
+   </property>
+  </action>
+  <action name="actionPS1">
+   <property name="text">
+    <string>PS1</string>
+   </property>
+  </action>
+  <action name="actionPS2">
+   <property name="text">
+    <string>PS2</string>
+   </property>
+  </action>
+  <action name="actionPS3">
+   <property name="text">
+    <string>PS3</string>
+   </property>
+  </action>
+  <action name="actionPSP">
+   <property name="text">
+    <string>PSP</string>
+   </property>
+  </action>
+  <action name="actionPC">
+   <property name="text">
+    <string>PC</string>
+   </property>
+  </action>
+  <action name="actionNDS">
+   <property name="text">
+    <string>NDS</string>
+   </property>
+  </action>
+  <action name="actionGBA">
+   <property name="text">
+    <string>GBA</string>
+   </property>
+  </action>
+  <action name="actionSNES">
+   <property name="text">
+    <string>SNES</string>
+   </property>
+  </action>
+  <action name="actionNES">
+   <property name="text">
+    <string>NES</string>
+   </property>
+  </action>
+  <action name="actionWII">
+   <property name="text">
+    <string>WII</string>
+   </property>
+  </action>
+  <action name="actionGC">
+   <property name="text">
+    <string>GC</string>
+   </property>
+  </action>
+  <action name="actionGENESIS">
+   <property name="text">
+    <string>GENESIS</string>
+   </property>
+  </action>
+  <action name="actionPreferences">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/preferences.svg</normaloff>icons/preferences.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Preferences</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionTop">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/top.svg</normaloff>icons/top.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Top</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionBottom">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/bottom.svg</normaloff>icons/bottom.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Bottom</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
