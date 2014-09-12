@@ -6,12 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>798</width>
-    <height>444</height>
+    <width>800</width>
+    <height>482</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>qmycrap</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/app.png</normaloff>icons/app.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -67,10 +71,11 @@
     <enum>RightToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
-    <bool>false</bool>
+    <bool>true</bool>
    </attribute>
    <addaction name="actionNew"/>
    <addaction name="actionSave"/>
+   <addaction name="actionSync"/>
    <addaction name="separator"/>
    <addaction name="actionImport"/>
    <addaction name="actionExport"/>
@@ -89,7 +94,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>798</width>
+     <width>800</width>
      <height>26</height>
     </rect>
    </property>
@@ -114,6 +119,8 @@
     <addaction name="actionTop"/>
     <addaction name="actionBottom"/>
     <addaction name="separator"/>
+    <addaction name="actionSync"/>
+    <addaction name="separator"/>
     <addaction name="actionPreferences"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
@@ -130,6 +137,10 @@
      <property name="title">
       <string>Run</string>
      </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>icons/run.png</normaloff>icons/run.png</iconset>
+     </property>
      <addaction name="actionFirstrun"/>
      <addaction name="actionRerun"/>
     </widget>
@@ -137,17 +148,21 @@
      <property name="title">
       <string>Platform</string>
      </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>icons/platform.png</normaloff>icons/platform.png</iconset>
+     </property>
      <addaction name="actionPS1"/>
      <addaction name="actionPS2"/>
      <addaction name="actionPS3"/>
      <addaction name="actionPSP"/>
      <addaction name="actionPC"/>
-     <addaction name="actionNDS"/>
-     <addaction name="actionGBA"/>
-     <addaction name="actionSNES"/>
      <addaction name="actionNES"/>
-     <addaction name="actionWII"/>
+     <addaction name="actionSNES"/>
      <addaction name="actionGC"/>
+     <addaction name="actionWII"/>
+     <addaction name="actionGBA"/>
+     <addaction name="actionNDS"/>
      <addaction name="actionGENESIS"/>
     </widget>
     <addaction name="actionDate"/>
@@ -196,73 +211,171 @@
    </property>
   </action>
   <action name="actionFirstrun">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/firstrun.png</normaloff>icons/firstrun.png</iconset>
+   </property>
    <property name="text">
     <string>Firstrun</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionRerun">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/rerun.png</normaloff>icons/rerun.png</iconset>
+   </property>
    <property name="text">
     <string>Rerun</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionPS1">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/ps1.png</normaloff>icons/ps1.png</iconset>
+   </property>
    <property name="text">
     <string>PS1</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionPS2">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/ps2.png</normaloff>icons/ps2.png</iconset>
+   </property>
    <property name="text">
     <string>PS2</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionPS3">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/ps3.png</normaloff>icons/ps3.png</iconset>
+   </property>
    <property name="text">
     <string>PS3</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionPSP">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/psp.png</normaloff>icons/psp.png</iconset>
+   </property>
    <property name="text">
     <string>PSP</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionPC">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/pc.png</normaloff>icons/pc.png</iconset>
+   </property>
    <property name="text">
     <string>PC</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionNDS">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/nds.png</normaloff>icons/nds.png</iconset>
+   </property>
    <property name="text">
     <string>NDS</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionGBA">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/gba.png</normaloff>icons/gba.png</iconset>
+   </property>
    <property name="text">
     <string>GBA</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionSNES">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/snes.png</normaloff>icons/snes.png</iconset>
+   </property>
    <property name="text">
     <string>SNES</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionNES">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/nes.png</normaloff>icons/nes.png</iconset>
+   </property>
    <property name="text">
     <string>NES</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionWII">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/wii.png</normaloff>icons/wii.png</iconset>
+   </property>
    <property name="text">
     <string>WII</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionGC">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/gc.png</normaloff>icons/gc.png</iconset>
+   </property>
    <property name="text">
     <string>GC</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionGENESIS">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/genesis.png</normaloff>icons/genesis.png</iconset>
+   </property>
    <property name="text">
     <string>GENESIS</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
    </property>
   </action>
   <action name="actionPreferences">
@@ -356,6 +469,18 @@
    </property>
    <property name="text">
     <string>About</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionSync">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/sync.svg</normaloff>icons/sync.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Sync</string>
    </property>
    <property name="iconVisibleInMenu">
     <bool>true</bool>
