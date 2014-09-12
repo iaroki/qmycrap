@@ -25,7 +25,7 @@ class MyCrap_Window(QtGui.QMainWindow, Ui_MainWindow):
 
         self.connect(self.treeView, QtCore.SIGNAL('clicked(QModelIndex)'), self.selectFile)
         self.connect(self.actionSave, QtCore.SIGNAL('triggered()'), self.save)
-        self.connect(self.actionPswd, QtCore.SIGNAL('triggered()'), self.pswd)
+#        self.connect(self.actionPswd, QtCore.SIGNAL('triggered()'), self.pswd)
         self.connect(self.actionTop, QtCore.SIGNAL('triggered()'), self.goTop)
         self.connect(self.actionBottom, QtCore.SIGNAL('triggered()'), self.goBottom)
         self.connect(self.actionDate, QtCore.SIGNAL('triggered()'), self.insertDate)

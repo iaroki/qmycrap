@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>793</width>
-    <height>416</height>
+    <width>798</width>
+    <height>444</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -69,14 +69,17 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionNew"/>
    <addaction name="actionSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionImport"/>
+   <addaction name="actionExport"/>
    <addaction name="separator"/>
    <addaction name="actionTop"/>
    <addaction name="actionBottom"/>
    <addaction name="separator"/>
    <addaction name="actionDate"/>
    <addaction name="separator"/>
-   <addaction name="actionPswd"/>
    <addaction name="actionPreferences"/>
    <addaction name="separator"/>
    <addaction name="actionExit"/>
@@ -86,7 +89,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>793</width>
+     <width>798</width>
      <height>26</height>
     </rect>
    </property>
@@ -94,7 +97,13 @@
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionNew"/>
     <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionRemove"/>
+    <addaction name="separator"/>
+    <addaction name="actionImport"/>
+    <addaction name="actionExport"/>
     <addaction name="separator"/>
     <addaction name="actionExit"/>
    </widget>
@@ -111,6 +120,7 @@
     <property name="title">
      <string>Help</string>
     </property>
+    <addaction name="actionAbout"/>
    </widget>
    <widget class="QMenu" name="menuInsert">
     <property name="title">
@@ -171,15 +181,6 @@
    </property>
    <property name="iconVisibleInMenu">
     <bool>true</bool>
-   </property>
-  </action>
-  <action name="actionPswd">
-   <property name="icon">
-    <iconset>
-     <normaloff>icons/lock.svg</normaloff>icons/lock.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Pswd</string>
    </property>
   </action>
   <action name="actionDate">
@@ -300,10 +301,68 @@
     <bool>true</bool>
    </property>
   </action>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/new.svg</normaloff>icons/new.svg</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionRemove">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/remove.svg</normaloff>icons/remove.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Remove</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionImport">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/import.svg</normaloff>icons/import.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Import</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/export.svg</normaloff>icons/export.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Export</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/info.svg</normaloff>icons/info.svg</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
  </widget>
- <resources>
-  <include location="icons.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>actionExit</sender>
