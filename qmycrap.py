@@ -98,7 +98,7 @@ class MyCrap_Window(QtGui.QMainWindow, Ui_MainWindow):
         encData = self.encrypt(key, newData)
         with open(newFilePath, 'wb') as f:
             f.write(encData)
-        self.preferences.setValue('current', newFilePath)
+        self.preferences.setValue('current', newFilePath.decode('utf-8'))
         self.preferences.sync()
         self.initRootTree()
 
