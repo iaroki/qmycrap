@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'qmycrap.ui'
 #
-# Created: Sat Sep 13 00:38:57 2014
+# Created: Sun Oct 12 13:36:40 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -50,6 +50,7 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.textEdit.sizePolicy().hasHeightForWidth())
         self.textEdit.setSizePolicy(sizePolicy)
+        self.textEdit.setAcceptRichText(False)
         self.textEdit.setObjectName(_fromUtf8("textEdit"))
         self.horizontalLayout.addWidget(self.textEdit)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -62,7 +63,6 @@ class Ui_MainWindow(object):
         self.toolBar.setToolButtonStyle(QtCore.Qt.ToolButtonIconOnly)
         self.toolBar.setObjectName(_fromUtf8("toolBar"))
         MainWindow.addToolBar(QtCore.Qt.RightToolBarArea, self.toolBar)
-        MainWindow.insertToolBarBreak(self.toolBar)
         self.menuBar = QtGui.QMenuBar(MainWindow)
         self.menuBar.setGeometry(QtCore.QRect(0, 0, 800, 26))
         self.menuBar.setObjectName(_fromUtf8("menuBar"))

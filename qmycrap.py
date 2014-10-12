@@ -210,6 +210,12 @@ class MyCrap_Window(QtGui.QMainWindow, Ui_MainWindow):
             f.write(encData)
         self.statusbar.showMessage('Saved!')
 
+        autosync = self.preferences.value('autosave')
+        autosync = autosync.toBool()
+        if autosync:
+            self.syncFiles()
+            self.statusbar.showMessage('Saved & Synced!')
+
         state = self.saveState()
         self.preferences.setValue('state', state)
         self.preferences.sync()
